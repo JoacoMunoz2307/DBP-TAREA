@@ -1,0 +1,58 @@
+{% extends "layout.html"%}
+
+{% block heading%}
+Bienvenido a Armrule.com
+<table style="width: 50%" style="height: 50%", border="1" align="center" bgcolor="#7DAAE3">
+  <tr>
+      <th>Register&nbsp; </th>
+  </tr>
+</table>
+{% endblock %}
+
+
+{% block body%}
+<style>
+  hl{
+    text-align: center;
+  }
+  table, th, td {
+    border: 0.5px solid;
+    padding: 6px;
+    text-align: center;
+}
+</style>
+<body style="background-color:lightblue:">
+  <table style="width: 50%" style="height: 50%", border="1" align="center" bgcolor="#7DAAE3">
+    <form action="{{url_for('register')}}" method="post">
+      <tr>
+        <th><input type="text" name="nombre" placeholder="Enter your name"></th>
+      </tr>
+      <tr>
+        <th><input type="date" name="fecha" placeholder="Enter your date"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="lugar" placeholder="Enter your place where you live"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="genero" placeholder="Enter your sex"></th>
+      </tr>
+      <tr>
+        <th><input type="password" name="contraseña" placeholder="Enter your password"></th>
+      </tr>
+      <tr>
+        <th><input type="email" name="correo" placeholder="Enter your email"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="casado" placeholder="Enter your civil status"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="carrera" placeholder="Enter your college career"></th>
+      </tr>
+      <tr>
+        <th><button> submit</button></th>
+      </tr>
+    </form>
+  </table>
+</body>
+
+{% endblock %}
